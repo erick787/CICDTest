@@ -10,7 +10,7 @@ namespace UnitTest
         {
             int number = 2;
             number += 5;
-            Assert.IsTrue(number % 2 == 0);
+            Assert.IsTrue(number % 2 == 0, "Failed, the number is not even");
         }
     }
 }
