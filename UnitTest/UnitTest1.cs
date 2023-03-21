@@ -1,16 +1,25 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Services;
 
 namespace UnitTest
 {
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod, TestCategory("This test checks whether a number is even or not")]
-        public void IsAnEvenNumber()
+        [TestMethod, TestCategory("Checks the functionality of the divide function")]
+        public void TestMethod()
         {
-            int number = 2;
-            number += 5;
-            Assert.IsTrue(number % 2 == 0, "Failed, the number is not even");
+            var service = new MathService();
+            var result = service.divide(10, 2);
+            Assert.AreEqual(5, result, "Result is not 5");
+        }
+
+        [TestMethod, TestCategory("Checks the functionality of the divide function when parameters are negative numbers")]
+        public void TestMethodValueA()
+        {
+            var service = new MathService();
+            var result = service.divide(-5, 5);
+            Assert.AreEqual(0, result, "Result is not zero when parameters are negative");
         }
     }
 }
