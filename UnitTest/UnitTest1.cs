@@ -10,7 +10,7 @@ namespace UnitTest
         public void TestMethod()
         {
             var service = new MathService();
-            var result = service.divide(10, 2);
+            var result = service.divide(10, 3);
             Assert.AreEqual(5, result, "Result is not 5");
         }
 
