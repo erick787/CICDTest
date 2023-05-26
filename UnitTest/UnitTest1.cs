@@ -11,7 +11,7 @@ namespace UnitTest
         {
             var service = new MathService();
             var result = service.divide(10, 2);
-            Assert.AreEqual(5, result, "Result is not 5");
+            Assert.AreEqual(3, result, "Result is not 5");
         }
 
         /*[TestMethod, TestCategory("Checks the functionality of the divide function when parameters are negative numbers")]
